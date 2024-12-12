@@ -64,13 +64,13 @@ This repository contains the implementation of a streaming data pipeline that ex
 
 ```plaintext
 .
-├── GraduationProjectDag/                 # Airflow DAGs
-├── kafka_spark_consumer/                # Kafka configuration and scripts
-├── sparkNotebook/                # Spark streaming application
-├── movies dashboard/            # Dashboard setup and configuration
-├── Producers/             # Database Platforms
-├── Pipeline.png/         # Data Pipeline
-└── README.md             # Project documentation
+├── GraduationProjectDag/     # Airflow DAGs
+├── kafka_spark_consumer/     # Kafka configuration and scripts
+├── sparkNotebook/            # Spark streaming application
+├── movies dashboard/         # Dashboard setup and configuration
+├── Producers/                # Database Platforms
+├── Pipeline.png/             # Data Pipeline
+└── README.md                 # Project documentation
 ```
 
 ## Contributing
