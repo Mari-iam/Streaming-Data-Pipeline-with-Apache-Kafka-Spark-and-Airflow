@@ -64,7 +64,7 @@ This repository contains the implementation of a streaming data pipeline that ex
 
 ```plaintext
 .
-├── GraduationProjectDag/     # Airflow DAGs
+├── Dag/                      # Airflow DAGs
 ├── kafka_spark_consumer/     # Kafka configuration and scripts
 ├── sparkNotebook/            # Spark streaming application
 ├── movies dashboard/         # Dashboard setup and configuration
