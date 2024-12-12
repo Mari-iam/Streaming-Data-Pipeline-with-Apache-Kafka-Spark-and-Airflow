@@ -1,6 +1,6 @@
 # Streaming Data Pipeline with Apache Kafka, Spark, and Airflow
 
-This repository contains the implementation of a streaming data pipeline that extracts data from popular streaming platforms (Netflix, Hulu, Amazon Prime, Disney+), processes it in real-time, and visualizes the results on a live dashboard. The pipeline leverages modern data engineering tools like Apache Kafka, Apache Spark, Apache Airflow, and a real-time database.
+This repository contains the implementation of a streaming data pipeline that extracts data from popular streaming platforms (Netflix, Hulu, Amazon Prime, Disney), processes it in real-time, and visualizes the results on a live dashboard. The pipeline leverages modern data engineering tools like Apache Kafka, Apache Spark, Apache Airflow, and a real-time database.
 
 ## Features
 
@@ -16,7 +16,7 @@ This repository contains the implementation of a streaming data pipeline that ex
 2. **Apache Kafka**: Acts as the messaging queue for data streams.
 3. **Apache Airflow**: Manages and schedules data producers to run in parallel.
 4. **Apache Spark**: Processes data in real time from Kafka topics.
-5. **Database**: Stores processed data for querying and visualization.
+5. **Database**: Stores processed data in tables for querying and visualization.
 6. **Dashboard**: Displays real-time streaming data insights.
 
 ## Prerequisites
