@@ -32,7 +32,7 @@ This repository contains the implementation of a streaming data pipeline that ex
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/streaming-data-pipeline.git
+   git clone https://github.com/Mari-iam/streaming-data-pipeline.git
    cd streaming-data-pipeline
    ```
 
