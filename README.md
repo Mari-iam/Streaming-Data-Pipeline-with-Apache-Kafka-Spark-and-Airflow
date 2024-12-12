@@ -1,47 +1,95 @@
-# Movie Platforms Data Streaming Project
+# Streaming Data Pipeline with Apache Kafka, Spark, and Airflow
 
-This project extracts data from various streaming platforms (Netflix, Hulu, Amazon Prime, Disney+) and sends it to Kafka for processing using Apache Spark. The data producers are managed and run in parallel using Apache Airflow. The processed data is then streamed into a database table and visualized on a real-time streaming dashboard.
+This repository contains the implementation of a streaming data pipeline that extracts data from popular streaming platforms (Netflix, Hulu, Amazon Prime, Disney+), processes it in real-time, and visualizes the results on a live dashboard. The pipeline leverages modern data engineering tools like Apache Kafka, Apache Spark, Apache Airflow, and a real-time database.
 
-## 📑 Table of Contents
+## Features
 
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
+- **Data Extraction**: Parallel extraction of data from multiple streaming platforms.
+- **Real-Time Processing**: Processing the data using Apache Spark Streaming.
+- **Workflow Management**: Scheduling and managing data producers with Apache Airflow.
+- **Streaming Data Visualization**: Visualizing processed data on a live dashboard.
+- **Database Integration**: Storing processed data into a database table.
 
-## 📝 Overview
+## Architecture
 
-The Movie Platforms Data Streaming Project aims to provide a real-time data pipeline that ingests, processes, and visualizes data from different streaming services. It leverages Kafka for data streaming, Apache Spark for data processing, and integrates with Apache Airflow, a database, and a streaming dashboard for parallel processing, analysis, and insights.
+1. **Data Producers**: Extract data from streaming platforms and send it to Kafka topics.
+2. **Apache Kafka**: Acts as the messaging queue for data streams.
+3. **Apache Airflow**: Manages and schedules data producers to run in parallel.
+4. **Apache Spark**: Processes data in real time from Kafka topics.
+5. **Database**: Stores processed data for querying and visualization.
+6. **Dashboard**: Displays real-time streaming data insights.
 
-## 🏛️ Architecture
+## Prerequisites
 
-The project's architecture consists of the following components:
+- **Docker**: To containerize the services.
+- **Apache Kafka**: For data streaming.
+- **Apache Spark**: For data processing.
+- **Apache Airflow**: For workflow orchestration.
+- **Database**: Any compatible database (e.g., PostgreSQL, MySQL, or MongoDB).
+- **Dashboard Tool**: E.g., Grafana or a custom-built dashboard.
 
-1. **Data Ingestion**: Data is collected from Netflix, Hulu, Amazon Prime, and Disney+.
-2. **Apache Airflow**: Manages and orchestrates the producers in parallel for efficient data ingestion.
-3. **Kafka**: Acts as a message broker for streaming data.
-4. **Apache Spark**: Processes data in real time, performing transformations and aggregations.
-5. **Database**: Stores the processed data for long-term analysis.
-6. **Streaming Dashboard**: Visualizes the data in real time.
+## Setup
 
-![Architecture Diagram](Pipeline.png)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/streaming-data-pipeline.git
+   cd streaming-data-pipeline
+   ```
 
-## ✨ Features
+2. Start the services using Docker Compose:
+   ```bash
+   docker-compose up
+   ```
 
-- Real-time data ingestion from multiple streaming platforms.
-- Parallel data producer execution using Apache Airflow.
-- Scalable data processing using Apache Spark.
-- Data storage for long-term analysis and reporting.
-- Real-time visualization via a streaming dashboard.
+3. Configure Apache Airflow:
+   - Access the Airflow UI at `http://localhost:8080`.
+   - Import the provided DAGs to manage data producers.
 
-## 🛠️ Technologies Used
+4. Access Kafka:
+   - Kafka is available at `localhost:9092`.
+   - Use Kafka topics to monitor incoming data.
 
-- **Apache Airflow**: For orchestrating and running data producers in parallel.
-- **Kafka**: For data streaming and message brokering.
-- **Apache Spark**: For real-time data processing.
-- **Python**: For data extraction and processing scripts.
-- **SQL Database**: For storing processed data.
-- **Docker**: For containerizing the application components.
-- **Dashboarding Tool**: Real-time visualization using PowerBI.
+5. Configure the database:
+   - Ensure the database is running and accessible.
+     
+
+## Workflow
+
+1. Airflow triggers data producers to extract data from streaming platforms.
+2. Data is published to Kafka topics.
+3. Spark processes data in real-time and streams the results into the database.
+4. The dashboard visualizes the processed data in real-time.
+
+## Folder Structure
+
+```plaintext
+.
+├── GraduationProjectDag/                 # Airflow DAGs
+├── kafka_spark_consumer/                # Kafka configuration and scripts
+├── sparkNotebook/                # Spark streaming application
+├── movies dashboard/            # Dashboard setup and configuration
+├── Producers/             # Database Platforms
+├── Pipeline.png/         # Data Pipeline
+└── README.md             # Project documentation
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to fork this repository and submit pull requests for improvements or new features.
+
+
+## Acknowledgments
+
+- [Apache Kafka](https://kafka.apache.org/)
+- [Apache Spark](https://spark.apache.org/)
+- [Apache Airflow](https://airflow.apache.org/)
+
+## Contact
+
+For questions or support, contact [mariammahmod035@gmail.com].
+
+Happy streaming!
+
+
 
 
